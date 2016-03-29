@@ -16,7 +16,7 @@ import {HeroData}          from '../hero-data';
 @Component({
   selector: 'my-toh',
   template: `
-  <h1>Tour of Heroes</h1>
+  <h1>Tour of Heroes 01</h1>
   <hero-list></hero-list>
   `,
   directives:[HeroListComponent],
