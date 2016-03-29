@@ -1,9 +1,9 @@
 import {Component}         from 'angular2/core';
 import {HTTP_PROVIDERS}    from 'angular2/http';
 
-import {Hero}              from './hero';
+import {Hero}              from '../model/hero';
 import {HeroListComponent} from './hero-list.component';
-import {HeroService}       from './hero.service';
+import {HeroService}       from '../../service/toh/hero.service';
 
 import {provide}           from 'angular2/core';
 import {XHRBackend}        from 'angular2/http';
@@ -11,7 +11,7 @@ import {XHRBackend}        from 'angular2/http';
 // in-memory web api imports
 import {InMemoryBackendService,
         SEED_DATA}         from 'a2-in-memory-web-api/core';
-import {HeroData}          from '../hero-data';
+import {HeroData}          from '../../hero-data';
 
 @Component({
   selector: 'my-toh',

@@ -3,7 +3,7 @@ import {JSONP_PROVIDERS}  from 'angular2/http';
 import {Observable}       from 'rxjs/Observable';
 import {Subject}          from 'rxjs/Subject';
 
-import {WikipediaService} from './wikipedia.service';
+import {WikipediaService} from '../../service/wiki/wikipedia.service';
 
 @Component({
   selector: 'my-wiki-smart',

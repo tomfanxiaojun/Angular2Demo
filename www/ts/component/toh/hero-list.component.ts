@@ -1,8 +1,8 @@
 import {Component, OnInit} from 'angular2/core';
 import {Http, Headers, HTTP_PROVIDERS, URLSearchParams} from 'angular2/http';
-import {Hero}              from './hero';
-import {HeroService}       from './hero.service';
-import {ArticleApi}       from './articleapi.service';
+import {Hero}              from '../model/hero';
+import {HeroService}       from '../../service/toh/hero.service';
+import {ArticleApi}       from '../../service/toh/articleapi.service';
 @Component({
   selector: 'hero-list',
   template: `
