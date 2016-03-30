@@ -1,9 +1,9 @@
 import {Component}         from 'angular2/core';
 import {HTTP_PROVIDERS}    from 'angular2/http';
 
-import {Hero}              from '../model/hero';
-import {HeroListComponent} from './hero-list.component';
-import {HeroService}       from '../../service/toh/hero.service';
+ 
+import {GoodsListComponent} from './goods-list.component';
+import {GoodsService}       from '../../service/toh/goods.service';
 
 import {provide}           from 'angular2/core';
 import {XHRBackend}        from 'angular2/http';
@@ -11,21 +11,21 @@ import {XHRBackend}        from 'angular2/http';
 // in-memory web api imports
 import {InMemoryBackendService,
         SEED_DATA}         from 'a2-in-memory-web-api/core';
-import {HeroData}          from '../../hero-data';
+import {GoodData}          from '../../goods-data';
 
 @Component({
   selector: 'my-toh',
   template: `
   <h1>Tour of Heroes 01</h1>
-  <hero-list></hero-list>
+  <goods-list></goods-list>
   `,
-  directives:[HeroListComponent],
+  directives: [GoodsListComponent],
   providers: [
     HTTP_PROVIDERS,
-    HeroService,
+    GoodsService,
     // in-memory web api providers
     provide(XHRBackend, { useClass: InMemoryBackendService }), // in-mem server
-    provide(SEED_DATA,  { useClass: HeroData }) // in-mem server data
+    provide(SEED_DATA, { useClass: GoodData }) // in-mem server data
   ]
 })
 export class TohComponent { }

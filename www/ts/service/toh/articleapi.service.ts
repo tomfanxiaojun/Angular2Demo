@@ -3,7 +3,6 @@ import {Injectable}     from 'angular2/core';
 import {Http, Response} from 'angular2/http';
 import {Headers, RequestOptions} from 'angular2/http';
 import {Jsonp, URLSearchParams} from 'angular2/http';
-import {Hero}           from '.../model/hero';
 import {Observable}     from 'rxjs/Observable';
 import {ParentService}  from '../baseService/parent.service';
 

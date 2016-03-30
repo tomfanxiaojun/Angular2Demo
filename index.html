@@ -10,9 +10,9 @@
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
     <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/typescript/lib/typescript.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script><!-- 为ES5浏览器提供ES6特性支持，比如Promise等。-->
+    <script src="node_modules/systemjs/dist/system.src.js"></script><!-- 通用模块加载器，支持AMD、CommonJS、ES6等各种格式的JS模块加载-->
+    <script src="node_modules/typescript/lib/typescript.js"></script><!--TypeScript转码器，将TypeScript代码转换为当前浏览器支持的ES5 代码。在本教程中，systemjs被配置为使用TypeScript转码器。-->
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="node_modules/angular2/bundles/http.dev.js"></script>

@@ -1,0 +1,18 @@
+<h3>Goods List:</h3>
+<ul>
+    <li *ngFor="#g of goods">
+        {{ g.name |title}}
+    </li>
+</ul>
+New Goods :
+<input #newGoods />
+<button (click)="addGoods(newGoods.value); newGoods.value=''">
+    Add Goods
+</button>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+<h3>List:</h3>
+<ul>
+    <li *ngFor="#article of articles"> 
+      {{article.headline.main}} 
+    </li>
+</ul>
