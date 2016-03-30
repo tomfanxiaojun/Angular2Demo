@@ -16,7 +16,7 @@ import {GoodData}          from '../../goods-data';
 @Component({
   selector: 'my-toh',
   template: `
-  <h1>Tour of Heroes 01</h1>
+  <h1>Goods</h1>
   <goods-list></goods-list>
   `,
   directives: [GoodsListComponent],
