@@ -3,9 +3,9 @@ import {Jsonp, URLSearchParams} from 'angular2/http';
 
 @Injectable()
 export class WikipediaService {
-  constructor(private jsonp: Jsonp) {}
+  constructor(private jsonp: Jsonp) { }
 
-  search (term: string) {
+  search(term: string) {
 
     let wikiUrl = 'http://en.wikipedia.org/w/api.php';
 
@@ -17,8 +17,7 @@ export class WikipediaService {
 
     // TODO: Add error handling
     return this.jsonp
-               .get(wikiUrl, { search: params })
-               .map(request => <string[]> request.json()[1]);
+      .get(wikiUrl, { search: params })
+      .map(request => <string[]> request.json()[1]);
   }
 }
-

@@ -7,8 +7,8 @@ import {Goods}           from '.../model/goods';
 import {Observable}     from 'rxjs/Observable';
 import {ParentService}  from '../baseService/parent.service';
 @Injectable()
-export class GoodsService extends ParentService{
-  constructor(private http: Http) { }  
+export class GoodsService extends ParentService {
+  constructor(private http: Http) { }
   private _goodsUrl = 'app/goods';  // URL to web api
   getGoods() {
     return this.http.get(this._goodsUrl)

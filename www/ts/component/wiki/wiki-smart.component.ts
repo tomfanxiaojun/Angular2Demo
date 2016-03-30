@@ -17,20 +17,18 @@ import {WikipediaService} from '../../service/wiki/wikipedia.service';
       <li *ngFor="#item of items | async">{{item}}</li>
     </ul>
   `,
-  providers:[JSONP_PROVIDERS, WikipediaService]
+  providers: [JSONP_PROVIDERS, WikipediaService]
 })
 export class WikiSmartComponent {
 
-  constructor (private _wikipediaService: WikipediaService) { }
+  constructor(private _wikipediaService: WikipediaService) { }
 
   private _searchTermStream = new Subject<string>();
 
-  search(term:string) { this._searchTermStream.next(term); }
+  search(term: string) { this._searchTermStream.next(term); }
 
-  items:Observable<string[]> = this._searchTermStream
+  items: Observable<string[]> = this._searchTermStream
     .debounceTime(300)
     .distinctUntilChanged()
-    .switchMap((term:string) => this._wikipediaService.search(term));
+    .switchMap((term: string) => this._wikipediaService.search(term));
 }
-
- 

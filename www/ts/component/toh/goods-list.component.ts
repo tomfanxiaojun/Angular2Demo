@@ -15,23 +15,23 @@ import {ArticleApi}       from '../../service/toh/articleapi.service';
 })
 export class GoodsListComponent implements OnInit {
 
-  constructor(private _goodsService: GoodsService ,private _articleApi: ArticleApi) { }
+  constructor(private _goodsService: GoodsService, private _articleApi: ArticleApi) { }
 
   ngOnInit() {
     this.getGoods();
     this.seachArticle();
 
   }
-  seachArticle(){
+  seachArticle() {
     this._articleApi.seachArticle('obama')
-   .subscribe(
-    articles =>this.articles=articles,
-    error => this.errorMessage = <any>error);
+      .subscribe(
+      articles => this.articles = articles,
+      error => this.errorMessage = <any>error);
   }
   getGoods() {
     this._goodsService.getGoods()
       .subscribe(
-     goods => this.goods = goods,
+      goods => this.goods = goods,
       error => this.errorMessage = <any>error);
   }
 
@@ -39,9 +39,7 @@ export class GoodsListComponent implements OnInit {
     if (!name) { return; }
     this._goodsService.addGoods(name)
       .subscribe(
-    goods => this.goods.push(goods),
+      goods => this.goods.push(goods),
       error => this.errorMessage = <any>error);
   }
 }
-
- 

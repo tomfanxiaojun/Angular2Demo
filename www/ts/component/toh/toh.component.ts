@@ -1,7 +1,7 @@
 import {Component}         from 'angular2/core';
 import {HTTP_PROVIDERS}    from 'angular2/http';
 
- 
+
 import {GoodsListComponent} from './goods-list.component';
 import {GoodsService}       from '../../service/toh/goods.service';
 
@@ -10,7 +10,7 @@ import {XHRBackend}        from 'angular2/http';
 
 // in-memory web api imports
 import {InMemoryBackendService,
-        SEED_DATA}         from 'a2-in-memory-web-api/core';
+SEED_DATA}         from 'a2-in-memory-web-api/core';
 import {GoodData}          from '../../goods-data';
 
 @Component({
@@ -29,4 +29,3 @@ import {GoodData}          from '../../goods-data';
   ]
 })
 export class TohComponent { }
- 

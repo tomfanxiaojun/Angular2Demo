@@ -1,20 +1,20 @@
 <h3>Goods List:</h3>
 <ul>
-    <li *ngFor="#g of goods">
-       <span style="margin-right: 10px;"> Name:{{ g.name |title}} </span>
-       <span style="margin-right: 10px;"> Price :{{ g.pirce }} </span>
-       <span style="margin-right: 10px;" [down-up]="g.change"> Change :{{ g.change }} </span>
-    </li>
+  <li *ngFor="#g of goods">
+    <span style="margin-right: 10px;"> Name:{{ g.name |title}} </span>
+    <span style="margin-right: 10px;"> Price :{{ g.pirce }} </span>
+    <span style="margin-right: 10px;" [down-up]="g.change"> Change :{{ g.change }} </span>
+  </li>
 </ul>
 New Goods :
 <input #newGoods />
 <button (click)="addGoods(newGoods.value); newGoods.value=''">
-    Add Goods
+  Add Goods
 </button>
 <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
 <h3>List:</h3>
 <ul>
-    <li *ngFor="#article of articles"> 
-      {{article.headline.main}} 
-    </li>
+  <li *ngFor="#article of articles">
+    {{article.headline.main}}
+  </li>
 </ul>
