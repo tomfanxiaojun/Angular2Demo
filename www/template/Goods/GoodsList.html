@@ -1,7 +1,9 @@
 <h3>Goods List:</h3>
 <ul>
     <li *ngFor="#g of goods">
-        {{ g.name |title}}
+       <span style="margin-right: 10px;"> Name:{{ g.name |title}} </span>
+       <span style="margin-right: 10px;"> Price :{{ g.pirce }} </span>
+       <span style="margin-right: 10px;" [down-up]="g.change"> Change :{{ g.change }} </span>
     </li>
 </ul>
 New Goods :

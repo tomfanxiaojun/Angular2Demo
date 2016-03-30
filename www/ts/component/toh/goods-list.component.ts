@@ -2,6 +2,7 @@ import {Component, OnInit, Pipe} from 'angular2/core';
 import {Http, Headers, HTTP_PROVIDERS, URLSearchParams} from 'angular2/http';
 import {Goods}              from '../model/goods';
 import {TitlePipe}              from '../../pipe/pipe';
+import {DownUp}              from '../../directive/directive';
 import {GoodsService}       from '../../service/toh/goods.service';
 import {ArticleApi}       from '../../service/toh/articleapi.service';
 @Component({
@@ -9,7 +10,8 @@ import {ArticleApi}       from '../../service/toh/articleapi.service';
   templateUrl: `../../www/template/Goods/GoodsList.html`,
   styles: ['.error {color:red;}'],
   providers: [HTTP_PROVIDERS, ArticleApi],
-  pipes: [TitlePipe]
+  pipes: [TitlePipe],
+  directives: [DownUp],
 })
 export class GoodsListComponent implements OnInit {
 
