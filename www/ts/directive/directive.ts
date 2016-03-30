@@ -1,4 +1,4 @@
-import {Directive, Injectable, ElementRef, Inject} from "angular2/core";
+import {Directive, Injectable, ElementRef, Inject, Renderer} from "angular2/core";
 @Injectable()
 @Directive({
   selector: "[down-up]",
@@ -8,9 +8,15 @@ import {Directive, Injectable, ElementRef, Inject} from "angular2/core";
   }
 })
 export class DownUp {
-  constructor( @Inject(ElementRef) er) {
+  constructor( @Inject(ElementRef) er, @Inject(Renderer) renderer) {
+
     this.er = er.nativeElement;
     this.er.style.cursor = "pointer";
+
+    // this.renderer = renderer;
+    // this.er = er;
+    // this.renderer.setElementStyle(er, "cursor", "pointer");
+
     this.flag = true;
   }
   set fontColor(c) {//我们可以使用ES6中的setter，在DownUp中捕捉每个变化的时刻：
